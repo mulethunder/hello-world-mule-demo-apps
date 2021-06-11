@@ -6,7 +6,7 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
     </http:listener-config>
     <apikit:config name="myexperienceapi-config" api="resource::76ba662c-a39b-45ea-a437-edadf50c014f:myexperienceapi:1.0.0:raml:zip:myexperienceapi.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
     <http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="c0af257d-2de1-4c85-8d11-9dc27e2e867b" >
-		<http:request-connection host="mule-worker-internal-mysystemapi.us-e2.cloudhub.io" port="8091"/>
+		<http:request-connection host="mysystemapi.us-e2.cloudhub.io"/>
 	</http:request-config>
 	<api-gateway:autodiscovery apiId="16949654" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="fbb29b33-3109-46ea-8e68-29db9f1305e5" flowRef="myexperienceapi-main"/>
 	<flow name="myexperienceapi-main">
